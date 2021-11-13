@@ -1,17 +1,17 @@
 {% set name = "stack_data" %}
-{% set version = "0.0.6" %}
+{% set version = "0.1.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: df93061c669cba1a2256689c7fb19603be99f96d46a107dc5306c11be847ea3c
+  sha256: 5cb2aff8164a81901160078ea2f5e39de978f08c96ac69e552a5c5345f892a81
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   noarch: python
 
 requirements:
