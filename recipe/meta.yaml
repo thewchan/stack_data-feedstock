@@ -28,7 +28,11 @@ requirements:
 
 test:
   imports:
-    - {{ name }}
+    - stack_data
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://github.com/alexmojaki/stack_data
