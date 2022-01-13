@@ -17,12 +17,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
+    - setuptools >=44
+    - setuptools_scm>=3.4.3
   run:
     - asttokens
     - executing
     - pure_eval
-    - python >=3.5
+    - python >=3.6
 
 test:
   imports:
