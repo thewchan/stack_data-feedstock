@@ -10,19 +10,21 @@ source:
   sha256: 5cb2aff8164a81901160078ea2f5e39de978f08c96ac69e552a5c5345f892a81
 
 build:
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
+    - setuptools >=44
+    - setuptools_scm>=3.4.3
   run:
     - asttokens
     - executing
     - pure_eval
-    - python >=3.5
+    - python >=3.6
 
 test:
   imports:
